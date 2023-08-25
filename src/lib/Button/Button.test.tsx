@@ -29,4 +29,16 @@ describe("Button", () => {
     userEvent.click(buttonElement);
     expect(mockFunction).toHaveBeenCalledTimes(1);
   });
+
+  it("should have the correct tailwind classes based on props", () => {
+    const mockFunction = jest.fn();
+    const { container } = render(
+      <Button clickHandler={mockFunction} variant="secondary" width="full" rounded="full" size="sm">
+        Button
+      </Button>,
+    );
+
+    const buttonElement = container.querySelector('.border-2.bg-secondary.text-sm.w-full.rounded-full');
+    expect(buttonElement).toBeTruthy();
+  });
 });
