@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { action } from '@storybook/addon-actions';
 import Button from './Button';
 
 const meta: Meta<typeof Button> = {
@@ -7,6 +8,7 @@ const meta: Meta<typeof Button> = {
   tags: ['autodocs'],
   argTypes: {
     children: { control: 'text' },
+    clickHandler: { action: 'Clicked' },
     variant: { control: 'select', options: ['primary', 'secondary', 'primary-outline', 'primary-outline-hover-fill', 'secondary-outline', 'secondary-outline-hover-fill', 'default'] },
     size: { control: 'select', options: ['sm', 'md', 'lg'] },
     width: { control: 'select', options: ['normal', 'full'] },
@@ -34,7 +36,7 @@ export const Base: Story = {
         <div className='text-center'>
           <p className="text-sm text-gray-500 mb-2">Primary</p>
           <Button
-            clickHandler={() => { console.log('Button clicked') }}
+            clickHandler={action('Clicked')}
             variant='primary'
           >
             Button
@@ -43,7 +45,7 @@ export const Base: Story = {
         <div className='text-center'>
           <p className="text-sm text-gray-500 mb-2">Secondary</p>
           <Button
-            clickHandler={() => { console.log('Button clicked') }}
+            clickHandler={action('Clicked')}
             variant='secondary'
           >
             Button
@@ -52,7 +54,7 @@ export const Base: Story = {
         <div className='text-center'>
           <p className="text-sm text-gray-500 mb-2">Default</p>
           <Button
-            clickHandler={() => { console.log('Button clicked') }}
+            clickHandler={action('Clicked')}
           >
             Button
           </Button>
@@ -69,7 +71,7 @@ export const Outline: Story = {
         <div className='text-center'>
           <p className="text-sm text-gray-500 mb-2">Primary Outline</p>
           <Button
-            clickHandler={() => { console.log('Button clicked') }}
+            clickHandler={action('Clicked')}
             variant='primary-outline'
           >
             Button
@@ -78,7 +80,7 @@ export const Outline: Story = {
         <div className='text-center'>
           <p className="text-sm text-gray-500 mb-2">Secondary Outline</p>
           <Button
-            clickHandler={() => { console.log('Button clicked') }}
+            clickHandler={action('Clicked')}
             variant='secondary-outline'
           >
             Button
@@ -96,7 +98,7 @@ export const OutlineHoverFill: Story = {
         <div className='text-center'>
           <p className="text-sm text-gray-500 mb-2">Primary Outline with Hover Fill</p>
           <Button
-            clickHandler={() => { console.log('Button clicked') }}
+            clickHandler={action('Clicked')}
             variant='primary-outline-hover-fill'
           >
             Button
@@ -105,7 +107,7 @@ export const OutlineHoverFill: Story = {
         <div className='text-center'>
           <p className="text-sm text-gray-500 mb-2">Secondary Outline with Hover Fill</p>
           <Button
-            clickHandler={() => { console.log('Button clicked') }}
+            clickHandler={action('Clicked')}
             variant='secondary-outline-hover-fill'
           >
             Button
@@ -123,7 +125,7 @@ export const Size: Story = {
         <div className='text-center'>
           <p className="text-sm text-gray-500 mb-2">Small</p>
           <Button
-            clickHandler={() => { console.log('Button clicked') }}
+            clickHandler={action('Clicked')}
             variant='primary'
             size='sm'
           >
@@ -133,7 +135,7 @@ export const Size: Story = {
         <div className='text-center'>
           <p className="text-sm text-gray-500 mb-2">Medium (Default)</p>
           <Button
-            clickHandler={() => { console.log('Button clicked') }}
+            clickHandler={action('Clicked')}
             variant='primary'
           >
             Button
@@ -142,7 +144,7 @@ export const Size: Story = {
         <div className='text-center'>
           <p className="text-sm text-gray-500 mb-2">Large</p>
           <Button
-            clickHandler={() => { console.log('Button clicked') }}
+            clickHandler={action('Clicked')}
             variant='primary'
             size='lg'
           >
@@ -161,7 +163,7 @@ export const Width: Story = {
         <div className='text-center'>
           <p className="text-sm text-gray-500 mb-2">Normal Width (Default)</p>
           <Button
-            clickHandler={() => { console.log('Button clicked') }}
+            clickHandler={action('Clicked')}
             variant='primary'
           >
             Button
@@ -170,7 +172,7 @@ export const Width: Story = {
         <div className='text-center'>
           <p className="text-sm text-gray-500 mb-2">Full Width</p>
           <Button
-            clickHandler={() => { console.log('Button clicked') }}
+            clickHandler={action('Clicked')}
             variant='primary'
             width='full'
           >
@@ -189,7 +191,7 @@ export const Rounded: Story = {
         <div className='text-center'>
           <p className="text-sm text-gray-500 mb-2">None</p>
           <Button
-            clickHandler={() => { console.log('Button clicked') }}
+            clickHandler={action('Clicked')}
             variant='primary'
             rounded='none'
           >
@@ -199,7 +201,7 @@ export const Rounded: Story = {
         <div className='text-center'>
           <p className="text-sm text-gray-500 mb-2">Normal (Default)</p>
           <Button
-            clickHandler={() => { console.log('Button clicked') }}
+            clickHandler={action('Clicked')}
             variant='primary'
           >
             Button
@@ -208,7 +210,7 @@ export const Rounded: Story = {
         <div className='text-center'>
           <p className="text-sm text-gray-500 mb-2">Full</p>
           <Button
-            clickHandler={() => { console.log('Button clicked') }}
+            clickHandler={action('Clicked')}
             variant='primary'
             rounded='full'
           >
