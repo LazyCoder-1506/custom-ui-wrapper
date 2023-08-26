@@ -1,6 +1,6 @@
 import { ButtonProp } from "./Button.type"
 
-function Button({ children, clickHandler, variant = 'default', size = 'md', width = 'normal', rounded = 'normal' }: ButtonProp) {
+function Button({ children, clickHandler, variant = 'default', size = 'md', width = 'normal', rounded = 'normal' }: ButtonProp): JSX.Element {
   const baseStyle = 'font-medium border-2';
   
   const variantStyle = (): string => {

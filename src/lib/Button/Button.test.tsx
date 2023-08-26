@@ -11,7 +11,7 @@ describe("Button", () => {
       </Button>
     );
 
-    const buttonElement = screen.getByText("Hello World");
+    const buttonElement = screen.queryByText("Hello World");
     expect(buttonElement).toBeInTheDocument();
   });
 
