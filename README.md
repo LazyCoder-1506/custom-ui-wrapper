@@ -10,7 +10,7 @@ To use the components, I will copy the `src/lib` folder over to my other project
 
 - [x] Button
 - [ ] Tabs
-- [ ] Modal
+- [x] Modal - Pending Review
 - [ ] Collapse
 - [ ] Loader
 - [ ] Toast / Notification
